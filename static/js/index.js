@@ -140,3 +140,13 @@ $(document).ready(function() {
     setupVideoCarouselAutoplay();
 
 })
+
+// Show/hide scroll to top button
+window.addEventListener('scroll', function() {
+    const scrollBtn = document.querySelector('.scroll-to-top');
+    if (window.pageYOffset > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
