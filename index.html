@@ -28,7 +28,7 @@
   <title>GenderCARE - Gender Bias Assessment and Reduction in LLMs</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   
   <!-- CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -174,13 +174,13 @@
               <span class="author-block"><sup>2</sup>CFAR and IHPC, A*STAR Singapore</span><br>
               <span class="author-block"><sup>3</sup>Beihang University</span><br>
               <span class="author-block"><sup>4</sup>Nanyang Technological University</span><br>
-              <span class="eql-cntrb"><small><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="eql-cntrb"><small><sup>*</sup>Corresponding Authors</small></span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links" style="margin-top: 1.5rem;">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2408.12494.pdf" target="_blank"
+                  <a href="https://dl.acm.org/doi/10.1145/3658644.3670284" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -200,14 +200,15 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2408.12494" target="_blank"
+                  <a href="https://huggingface.co/datasets/Warddamn2/GenderPair" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    🤗
                   </span>
-                  <span>arXiv</span>
+                  <span>Dataset</span>
                   </a>
                 </span>
+
               </div>
             </div>
           </div>
@@ -284,15 +285,15 @@
               <tr>
                 <th rowspan="2" style="vertical-align: middle;">Gender Groups</th>
                 <th colspan="4" style="text-align: center;">Gender Targets</th>
-                <th rowspan="2" style="vertical-align: middle;"># Biased Descriptors</th>
-                <th rowspan="2" style="vertical-align: middle;"># Anti-Biased Descriptors</th>
-                <th rowspan="2" style="vertical-align: middle;"># Prompts</th>
+                <th rowspan="2" style="vertical-align: middle;">Biased Descriptors</th>
+                <th rowspan="2" style="vertical-align: middle;">Anti-Biased Descriptors</th>
+                <th rowspan="2" style="vertical-align: middle;">Prompts</th>
               </tr>
               <tr>
-                <th># Identities</th>
-                <th># Titles</th>
-                <th># Pronouns</th>
-                <th># Names</th>
+                <th>Identities</th>
+                <th>Titles</th>
+                <th>Pronouns</th>
+                <th>Names</th>
               </tr>
             </thead>
             <tbody>
@@ -339,7 +340,7 @@
       <h2 class="title is-3 has-text-centered">GenderPair Prompt Examples</h2>
       <div class="content">
         <p class="has-text-justified" style="margin-bottom: 1rem;">
-          Some prompt instances of the proposed <strong>GenderPair</strong> benchmark. Each instance is constructed as [<span style="color: #3273dc;">instruction</span> & <span style="color: #c53030;">pair set</span> & <span style="color: #805ad5;">requirement</span>]. For different configurations of pair set, we provide two options for instruction.
+          Some prompt instances of the proposed <strong>GenderPair</strong> benchmark. Each instance is constructed as [<span style="color: #3273dc;">instruction</span> & <span style="color: #c53030;">pair set</span> & <span style="color: #877954;">requirement</span>]. For different configurations of pair set, we provide two options for instruction.
         </p>
         <img src="static/images/table_genderpair_examples.png" alt="GenderPair Examples" class="sample-image">
       </div>
