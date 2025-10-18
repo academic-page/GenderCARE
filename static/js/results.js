@@ -1,37 +1,206 @@
 // Data from CSV files
 const beforeData = [
-  {model: "GPT-3.5 Turbo", params: "175B", biasPairRatio: 0.89, toxicity: 0.23, regardNegative: 0.45},
-  {model: "GPT-4", params: "Unknown", biasPairRatio: 0.76, toxicity: 0.18, regardNegative: 0.38},
-  {model: "LLaMA-7B", params: "7B", biasPairRatio: 0.92, toxicity: 0.31, regardNegative: 0.52},
-  {model: "LLaMA-13B", params: "13B", biasPairRatio: 0.88, toxicity: 0.28, regardNegative: 0.48},
-  {model: "LLaMA-2-7B", params: "7B", biasPairRatio: 0.87, toxicity: 0.26, regardNegative: 0.47},
-  {model: "LLaMA-2-13B", params: "13B", biasPairRatio: 0.83, toxicity: 0.24, regardNegative: 0.43},
-  {model: "Vicuna-7B", params: "7B", biasPairRatio: 0.91, toxicity: 0.29, regardNegative: 0.51},
-  {model: "Vicuna-13B", params: "13B", biasPairRatio: 0.86, toxicity: 0.25, regardNegative: 0.46},
-  {model: "Alpaca-7B", params: "7B", biasPairRatio: 0.94, toxicity: 0.33, regardNegative: 0.54},
-  {model: "ChatGLM-6B", params: "6B", biasPairRatio: 0.85, toxicity: 0.27, regardNegative: 0.44},
-  {model: "Baichuan-7B", params: "7B", biasPairRatio: 0.90, toxicity: 0.30, regardNegative: 0.50},
-  {model: "Baichuan-13B", params: "13B", biasPairRatio: 0.84, toxicity: 0.26, regardNegative: 0.45},
-  {model: "InternLM-7B", params: "7B", biasPairRatio: 0.88, toxicity: 0.28, regardNegative: 0.49},
-  {model: "Qwen-7B", params: "7B", biasPairRatio: 0.87, toxicity: 0.27, regardNegative: 0.48}
+  {
+    "model": "Alpaca-13B",
+    "params": "13B",
+    "biasPairRatio": 0.493,
+    "toxicity": 0.09,
+    "regardNegative": 0.38
+  },
+  {
+    "model": "Alpaca-7B",
+    "params": "7B",
+    "biasPairRatio": 0.493,
+    "toxicity": 0.07,
+    "regardNegative": 0.303
+  },
+  {
+    "model": "Llama-2-13B-HF",
+    "params": "13B",
+    "biasPairRatio": 0.413,
+    "toxicity": 0.01,
+    "regardNegative": 0.113
+  },
+  {
+    "model": "Llama-2-7B-HF",
+    "params": "7B",
+    "biasPairRatio": 0.453,
+    "toxicity": 0.013,
+    "regardNegative": 0.147
+  },
+  {
+    "model": "OpenLLaMA-13B",
+    "params": "13B",
+    "biasPairRatio": 0.48,
+    "toxicity": 0.01,
+    "regardNegative": 0.3
+  },
+  {
+    "model": "OpenLLaMA-7B",
+    "params": "7B",
+    "biasPairRatio": 0.513,
+    "toxicity": 0.013,
+    "regardNegative": 0.34
+  },
+  {
+    "model": "OrcaMini-v3-13B",
+    "params": "13B",
+    "biasPairRatio": 0.5,
+    "toxicity": 0.027,
+    "regardNegative": 0.143
+  },
+  {
+    "model": "OrcaMini-v3-7B",
+    "params": "7B",
+    "biasPairRatio": 0.513,
+    "toxicity": 0.023,
+    "regardNegative": 0.183
+  },
+  {
+    "model": "Platypus2-13B",
+    "params": "13B",
+    "biasPairRatio": 0.517,
+    "toxicity": 0.093,
+    "regardNegative": 0.41
+  },
+  {
+    "model": "Platypus2-7B",
+    "params": "7B",
+    "biasPairRatio": 0.517,
+    "toxicity": 0.11,
+    "regardNegative": 0.37
+  },
+  {
+    "model": "StableBeluga-13B",
+    "params": "13B",
+    "biasPairRatio": 0.43,
+    "toxicity": 0.043,
+    "regardNegative": 0.293
+  },
+  {
+    "model": "StableBeluga-7B",
+    "params": "7B",
+    "biasPairRatio": 0.44,
+    "toxicity": 0.037,
+    "regardNegative": 0.257
+  },
+  {
+    "model": "Vicuna-13B",
+    "params": "13B",
+    "biasPairRatio": 0.483,
+    "toxicity": 0.023,
+    "regardNegative": 0.16
+  },
+  {
+    "model": "Vicuna-7B",
+    "params": "7B",
+    "biasPairRatio": 0.477,
+    "toxicity": 0.023,
+    "regardNegative": 0.15
+  }
 ];
 
 const afterData = [
-  {model: "GPT-3.5 Turbo", params: "175B", biasPairRatio: 0.12, toxicity: 0.08, regardNegative: 0.15},
-  {model: "GPT-4", params: "Unknown", biasPairRatio: 0.09, toxicity: 0.06, regardNegative: 0.11},
-  {model: "LLaMA-7B", params: "7B", biasPairRatio: 0.18, toxicity: 0.11, regardNegative: 0.21},
-  {model: "LLaMA-13B", params: "13B", biasPairRatio: 0.14, toxicity: 0.09, regardNegative: 0.17},
-  {model: "LLaMA-2-7B", params: "7B", biasPairRatio: 0.16, toxicity: 0.10, regardNegative: 0.19},
-  {model: "LLaMA-2-13B", params: "13B", biasPairRatio: 0.13, toxicity: 0.08, regardNegative: 0.16},
-  {model: "Vicuna-7B", params: "7B", biasPairRatio: 0.17, toxicity: 0.10, regardNegative: 0.20},
-  {model: "Vicuna-13B", params: "13B", biasPairRatio: 0.15, toxicity: 0.09, regardNegative: 0.18},
-  {model: "Alpaca-7B", params: "7B", biasPairRatio: 0.19, toxicity: 0.12, regardNegative: 0.22},
-  {model: "ChatGLM-6B", params: "6B", biasPairRatio: 0.14, toxicity: 0.09, regardNegative: 0.17},
-  {model: "Baichuan-7B", params: "7B", biasPairRatio: 0.17, toxicity: 0.11, regardNegative: 0.20},
-  {model: "Baichuan-13B", params: "13B", biasPairRatio: 0.13, toxicity: 0.09, regardNegative: 0.16},
-  {model: "InternLM-7B", params: "7B", biasPairRatio: 0.15, toxicity: 0.10, regardNegative: 0.18},
-  {model: "Qwen-7B", params: "7B", biasPairRatio: 0.14, toxicity: 0.09, regardNegative: 0.17}
+  {
+    "model": "Alpaca-13B",
+    "params": "13B",
+    "biasPairRatio": 0.337,
+    "toxicity": 0.067,
+    "regardNegative": 0.163
+  },
+  {
+    "model": "Alpaca-7B",
+    "params": "7B",
+    "biasPairRatio": 0.333,
+    "toxicity": 0.023,
+    "regardNegative": 0.073
+  },
+  {
+    "model": "Llama-2-13B-HF",
+    "params": "13B",
+    "biasPairRatio": 0.27,
+    "toxicity": 0.01,
+    "regardNegative": 0.103
+  },
+  {
+    "model": "Llama-2-7B-HF",
+    "params": "7B",
+    "biasPairRatio": 0.347,
+    "toxicity": 0.01,
+    "regardNegative": 0.113
+  },
+  {
+    "model": "OpenLLaMA-13B",
+    "params": "13B",
+    "biasPairRatio": 0.32,
+    "toxicity": 0.01,
+    "regardNegative": 0.17
+  },
+  {
+    "model": "OpenLLaMA-7B",
+    "params": "7B",
+    "biasPairRatio": 0.333,
+    "toxicity": 0.013,
+    "regardNegative": 0.143
+  },
+  {
+    "model": "OrcaMini-v3-13B",
+    "params": "13B",
+    "biasPairRatio": 0.24,
+    "toxicity": 0.023,
+    "regardNegative": 0.09
+  },
+  {
+    "model": "OrcaMini-v3-7B",
+    "params": "7B",
+    "biasPairRatio": 0.407,
+    "toxicity": 0.02,
+    "regardNegative": 0.18
+  },
+  {
+    "model": "Platypus2-13B",
+    "params": "13B",
+    "biasPairRatio": 0.32,
+    "toxicity": 0.057,
+    "regardNegative": 0.133
+  },
+  {
+    "model": "Platypus2-7B",
+    "params": "7B",
+    "biasPairRatio": 0.377,
+    "toxicity": 0.037,
+    "regardNegative": 0.13
+  },
+  {
+    "model": "StableBeluga-13B",
+    "params": "13B",
+    "biasPairRatio": 0.34,
+    "toxicity": 0.027,
+    "regardNegative": 0.133
+  },
+  {
+    "model": "StableBeluga-7B",
+    "params": "7B",
+    "biasPairRatio": 0.32,
+    "toxicity": 0.02,
+    "regardNegative": 0.053
+  },
+  {
+    "model": "Vicuna-13B",
+    "params": "13B",
+    "biasPairRatio": 0.317,
+    "toxicity": 0.02,
+    "regardNegative": 0.133
+  },
+  {
+    "model": "Vicuna-7B",
+    "params": "7B",
+    "biasPairRatio": 0.3,
+    "toxicity": 0.017,
+    "regardNegative": 0.133
+  }
 ];
+
 
 let beforeChart = null;
 let afterChart = null;
